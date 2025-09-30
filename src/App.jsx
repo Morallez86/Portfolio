@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import Home from './pages/Home'
+import { HashRouter } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App(){
   return (
-      <div className="text-3xl font-bold underline">
-        Hello World
-      </div>
+    <HashRouter>
+      <Home />
+    </HashRouter>
   )
 }
-
-export default App
