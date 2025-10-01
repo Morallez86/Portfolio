@@ -1,11 +1,20 @@
 import React from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
 import Home from './pages/Home'
-import { HashRouter } from 'react-router-dom'
+
 
 export default function App(){
   return (
     <HashRouter>
-      <Home />
+      <div>
+        <Header />
+        <main className="min-h-screen">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+      </div>
     </HashRouter>
   )
 }
