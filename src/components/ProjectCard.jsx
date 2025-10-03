@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaYoutube, FaGithub } from 'react-icons/fa';
 
 export default function ProjectCard({ 
@@ -80,8 +79,7 @@ export default function ProjectCard({
               href={links.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-red-500 transition"
-            >
+              className="flex items-center gap-2 hover:text-red-500 transition">
               <FaYoutube size={18} /> YouTube
             </a>
           )}

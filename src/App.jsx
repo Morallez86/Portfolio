@@ -10,7 +10,7 @@ export default function App(){
     <HashRouter>
       <div className="min-h-screen w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         <Header />
-        <main className="p-4">
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

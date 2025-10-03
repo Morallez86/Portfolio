@@ -6,15 +6,14 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4 shadow">
+    <header className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4 shadow border border-teal-700 dark:border-indigo-600 rounded-b-lg">
       <div className=" flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">MyPortfolio</Link>
-
+        <Link to="/" className="text-2xl font-bold text-teal-700 dark:text-indigo-500">MyPortfolio</Link>
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-indigo-500">Home</Link>
-          <Link to="/projects" className="hover:text-indigo-500">Projects</Link>
-          <Link to="/about" className="hover:text-indigo-500">About</Link>
-          <Link to="/contact" className="hover:text-indigo-500">Contact</Link>
+          <Link to="/" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Home</Link>
+          <Link to="/projects" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Projects</Link>
+          <Link to="/about" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">About</Link>
+          <Link to="/contact" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-indigo-600 transition">Contact</Link>
         </nav>
 
         <div>
@@ -27,9 +26,8 @@ export default function Header() {
           </button>
         </div>
       </div>
-
       {open && (
-        <div className="md:hidden mt-2 absolute bg-gray-700 text-xl w-1/3 text-center rounded-r-md border border-gray-500 ">
+        <div className="md:hidden mt-2 absolute z-10 bg-gray-700 text-xl w-1/3 text-center rounded-r-md border border-gray-500 ">
           <div className="border border-gray-500 p-3 hover:bg-gray-600">
             <Link to="/" onClick={() => setOpen(false)} className="block">Home</Link>
           </div>

@@ -5,7 +5,6 @@ export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 space-y-8">
       <h1 className="text-3xl font-bold mb-6">My Projects</h1>
-
       <ProjectCard
         title="CARLA MotionVRConnect"
         tagline="VR + Motion Chair + Dynamic Scenarios"
@@ -31,7 +30,7 @@ export default function Projects() {
       />
       <ProjectCard
         title="Scrum project management App"
-        tagline="Agile Project Management with Real-Time Collaboratio"
+        tagline="Agile Project Management"
         description="A web application enabling teams to manage projects using Scrum methodology. Features include role definitions (Scrum Master, Product Owner, Team), task management, dashboards, notifications, user authentication via JWT, and resource/component requests."
         image={import.meta.env.BASE_URL + "images/scrum-project.png"}
         skills={[
