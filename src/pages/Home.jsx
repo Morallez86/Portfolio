@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-<section className="relative flex justify-center items-center min-h-screen bg-slate-900 overflow-hidden">
+    <section className="relative flex justify-center items-center min-h-screen bg-slate-900 overflow-hidden">
       <div className="absolute inset-0 flex justify-center" aria-hidden="true">
         <img
           src={import.meta.env.BASE_URL + "images/pajala-night.jpg"}
@@ -18,11 +18,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white block dark:hidden"></div>
       </div>
       <div className="relative z-10 bg-white/80 dark:bg-transparent rounded-xl shadow-xl p-8 flex flex-col items-center max-w-md">
-        <h1 className="text-4xl font-bold mb-2 text-slate-800 dark:text-white">
+        <h1 className="text-4xl font-bold mb-2 text-teal-800 dark:text-indigo-500">
           Hi, I'm João Morais
         </h1>
         
-        <h2 className="text-xl mb-4 text-teal-700 dark:text-indigo-400">
+        <h2 className="text-xl mb-4 text-teal-700 dark:text-indigo-300">
           Junior Software Developer
         </h2>
         
@@ -33,25 +33,6 @@ export default function Home() {
         <p className="max-w-xl text-center mb-6 text-slate-700 dark:text-slate-200"> 
           Currently looking for opportunities to grow as a developer and contribute to impactful projects.
         </p>
-        
-        <div className="flex gap-4">
-          <a
-            href="https://github.com/Morallez86"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline text-teal-700 dark:text-indigo-400"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/joaofmorais"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline text-teal-700 dark:text-indigo-400"
-          >
-            LinkedIn
-          </a>
-        </div>
       </div>
     </section>
   );

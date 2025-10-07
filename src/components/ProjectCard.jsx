@@ -2,7 +2,6 @@ import { FaYoutube, FaGithub } from 'react-icons/fa';
 
 export default function ProjectCard({ 
     title,
-    tagline,
     description,
     image,
     skills = [],
@@ -30,8 +29,7 @@ export default function ProjectCard({
       </div>
       <div className="p-6 flex flex-col gap-4">
         <div>
-          <h2 className="text-2xl font-bold">{title}</h2>
-          <p className="text-indigo-500 font-medium">{tagline}</p>
+          <h2 className="text-2xl font-bold text-teal-600 dark:text-white">{title}</h2>
         </div>
         <p className="text-slate-700 dark:text-slate-200">{description}</p>
         <div className="flex flex-wrap gap-2">

@@ -1,13 +1,32 @@
-import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 
 export default function Projects() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 space-y-8">
-      <h1 className="text-3xl font-bold mb-6">My Projects</h1>
+    <div className="max-w-6xl mx-auto space-y-8 bg-white dark:bg-slate-900 py-16 px-8">
+      <h1 className="text-4xl text-teal-800 font-bold text-center dark:text-white mb-12">My Projects</h1>
+      <ProjectCard
+        title="Personal Developer Portfolio"
+        description="This portfolio website was built with React, Vite, and Tailwind CSS. It features a responsive design, dark mode, project highlights, and easy navigation."
+        skills={[
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "JavaScript",
+          "GitHub Pages",
+          "Responsive Design"
+        ]}
+        highlights={[
+          "Dark mode support",
+          "Mobile-friendly layout",
+          "Project cards with multiple links",
+          "Deployed on GitHub Pages"
+        ]}
+        links={{
+          github: "https://github.com/Morallez86/dev-portfolio"
+        }}
+      />
       <ProjectCard
         title="CARLA MotionVRConnect"
-        tagline="VR + Motion Chair + Dynamic Scenarios"
         description="Extension of the CARLA driving simulator with support for Virtual Reality, YawVR motion chair, custom sensors, and a modular scenario system."
         image={import.meta.env.BASE_URL + "images/carla-sim.png"}
         skills={[
@@ -30,7 +49,6 @@ export default function Projects() {
       />
       <ProjectCard
         title="Scrum project management App"
-        tagline="Agile Project Management"
         description="A web application enabling teams to manage projects using Scrum methodology. Features include role definitions (Scrum Master, Product Owner, Team), task management, dashboards, notifications, user authentication via JWT, and resource/component requests."
         image={import.meta.env.BASE_URL + "images/scrum-project.png"}
         skills={[
