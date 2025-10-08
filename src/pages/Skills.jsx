@@ -53,7 +53,7 @@ export default function About() {
   ]
 
   return (
-    <section className="min-h-screen bg-white dark:bg-slate-900 py-16 px-8">
+    <section className="min-h-screen dark:bg-slate-900 py-16 px-8">
       <h1 className="text-4xl font-bold text-center text-teal-800 dark:text-white mb-12">
         Skills
       </h1>

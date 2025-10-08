@@ -30,7 +30,7 @@ export default function Header() {
         </div>
       </div>
       {open && (
-        <div className="md:hidden mt-4 -ml-4 absolute z-10 dark:bg-gray-700 text-xl w-1/3 text-center rounded-r-md border dark:border-gray-500 ">
+        <div className="md:hidden mt-4 -ml-4 absolute z-10 bg-white dark:bg-gray-700 text-xl w-1/3 text-center rounded-r-md border dark:border-gray-500 ">
           <div className="border text-teal-700 dark:text-white hover:bg-teal-700 hover:text-white dark:border-gray-500 p-3 dark:hover:bg-gray-600">
             <Link to="/" onClick={() => setOpen(false)} className="block">Home</Link>
           </div>

@@ -2,11 +2,12 @@ import ProjectCard from '../components/ProjectCard';
 
 export default function Projects() {
   return (
-    <div className="max-w-6xl mx-auto space-y-8 bg-white dark:bg-slate-900 py-16 px-8">
+    <div className="max-w-6xl mx-auto space-y-8 bg-gray-100 dark:bg-slate-900 py-16 px-8">
       <h1 className="text-4xl text-teal-800 font-bold text-center dark:text-white mb-12">My Projects</h1>
       <ProjectCard
         title="Personal Developer Portfolio"
         description="This portfolio website was built with React, Vite, and Tailwind CSS. It features a responsive design, dark mode, project highlights, and easy navigation."
+        image={import.meta.env.BASE_URL + "images/my-portfolio.png"}
         skills={[
           "React",
           "Vite",

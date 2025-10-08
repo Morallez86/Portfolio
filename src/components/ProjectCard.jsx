@@ -14,7 +14,7 @@ export default function ProjectCard({
         <img
           src={image}
           alt={title}
-          className="w-full h-64 md:h-full object-cover"
+          className="w-full h-64 md:h-full"
         />
         {links.youtube && (
           <a

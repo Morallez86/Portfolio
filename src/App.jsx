@@ -4,11 +4,12 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Skills from './pages/Skills'
+import ScrollToTopButton from './components/ScrollToTopButton'
 
 export default function App(){
   return (
     <HashRouter>
-      <div className="min-h-screen w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+      <div className="min-h-screen w-full bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         <Header />
         <main>
           <Routes>
@@ -18,6 +19,7 @@ export default function App(){
             <Route path="/skills" element={<Skills/>} />
           </Routes>
         </main>
+        <ScrollToTopButton />
       </div>
     </HashRouter>
   )
