@@ -60,11 +60,8 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
         {skillCategories.map((category) => (
-          <SkillCategory
-            key={category.title}
-            title={category.title}
-            color={category.color}
-            skills={category.skills}
+          <SkillCategory 
+            key={category.title} {...category}
           />
         ))}
       </div>

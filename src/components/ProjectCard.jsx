@@ -4,6 +4,7 @@ export default function ProjectCard({
     title,
     description,
     image,
+    category = [],
     skills = [],
     links = {},
     highlights = [] 
