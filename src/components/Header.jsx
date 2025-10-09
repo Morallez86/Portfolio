@@ -7,10 +7,10 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4 shadow border border-teal-700 dark:border-indigo-600 rounded-b-lg">
+    <header className="relative bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4 shadow border border-teal-700 dark:border-indigo-600 rounded-b-lg">
       <div className=" flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-teal-700 dark:text-indigo-500">MyPortfolio</Link>
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
           <Link to="/" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-teal-900 dark:hover:bg-indigo-600 transition">Home</Link>
           <Link to="/projects" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-teal-900 dark:hover:bg-indigo-600 transition">Projects</Link>
           <Link to="/skills" className="px-6 py-2 bg-teal-700 dark:bg-indigo-500 text-white rounded hover:bg-teal-900 dark:hover:bg-indigo-600 transition">Skills</Link>

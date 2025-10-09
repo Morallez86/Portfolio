@@ -9,10 +9,10 @@ export default function Contact() {
       </p>
       <div className="flex flex-col gap-4 items-center">
         <a
-          href="mailto:jjoaommorais@hotmail.com"
+          href="mailto:joao.morais.domain@gmail.com"
           className="flex items-center gap-2 text-teal-700 dark:text-indigo-400 hover:underline"
         >
-          <FaEnvelope /> jjoaommorais@hotmail.com
+          <FaEnvelope /> joao.morais.domain@gmail.com
         </a>
         <a
           href="https://linkedin.com/in/joaofmorais"
