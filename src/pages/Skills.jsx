@@ -1,11 +1,20 @@
-// src/pages/About.jsx
+// src/pages/Skills.jsx
 import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaJava, FaNpm } from "react-icons/fa"
 import { SiTailwindcss, SiJavascript, SiVite, SiGithub, SiJest, SiMysql, SiSqlite, SiIntellijidea, SiPostman, SiUnrealengine } from "react-icons/si"
 import { BiLogoCPlusPlus } from 'react-icons/bi';
 import { VscVscode } from 'react-icons/vsc';
-import SkillCategory from "../components/SkillCategory"
+import { useLocation } from 'react-router-dom';
+import { DiResponsive } from 'react-icons/di';
+import { GiVrHeadset } from 'react-icons/gi';
 
-export default function About() {
+import SkillCategory from "../components/SkillCategory"
+import ProjectCard from "../components/ProjectCard";
+
+export default function Skills() {
+
+  const location = useLocation();
+  const selectedProject = location.state?.selectedProject;
+
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -18,6 +27,7 @@ export default function About() {
         { name: "TailwindCSS", icon: <SiTailwindcss className="text-cyan-400" /> },
         { name: "Vite", icon: <SiVite className="text-purple-500" /> },
         { name: "Jest", icon: <SiJest className="text-rose-600" /> },
+        { name: "Responsive Design", icon: <DiResponsive className="text-green-500" /> },
       ],
     },
     {
@@ -48,6 +58,7 @@ export default function About() {
       color: "text-teal-700 dark:text-indigo-400",
       skills: [
         { name: "Unreal Engine", icon: <SiUnrealengine className="text-gray-700 dark:text-gray-300" /> },
+        { name: "VR Development", icon: <GiVrHeadset className="text-purple-600" /> },
       ],
     },
   ]
@@ -57,14 +68,20 @@ export default function About() {
       <h1 className="text-4xl font-bold text-center text-teal-800 dark:text-white mb-12">
         Skills
       </h1>
-
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
         {skillCategories.map((category) => (
           <SkillCategory 
-            key={category.title} {...category}
+            key={category.title}
+            {...category}
+            selectedProject={selectedProject}
           />
         ))}
       </div>
+      {selectedProject && (
+        <div className="max-w-7xl mx-auto mt-20">
+          <ProjectCard {...selectedProject} />
+        </div>
+      )}
     </section>
   )
 }

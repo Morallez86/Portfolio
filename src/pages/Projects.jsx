@@ -1,10 +1,17 @@
 import ProjectCard from '../components/ProjectCard';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export default function Projects() {
   const categories = ["All", "Frontend", "Backend"];
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const navigate = useNavigate();
+
+  const handleProjectClick = (project) => {
+    navigate('/skills', { state: { selectedProject: project } });
+  };
 
   const projects = [
     {
@@ -15,10 +22,14 @@ export default function Projects() {
       skills: [
         "React",
         "Vite",
-        "Tailwind CSS",
+        "TailwindCSS",
         "JavaScript",
         "GitHub Pages",
-        "Responsive Design"
+        "Responsive Design",
+        "GitHub",
+        "HTML5",
+        "VSCode",
+        "npm"
       ],
       highlights: [
         "Dark mode support",
@@ -27,7 +38,7 @@ export default function Projects() {
         "Deployed on GitHub Pages"
       ],
       links: {
-        github: "https://github.com/Morallez86/dev-portfolio"
+        github: "https://github.com/Morallez86/Portfolio"
       }
     },
     {
@@ -39,9 +50,10 @@ export default function Projects() {
         "C++",
         "Python",
         "Unreal Engine",
-        "VR Integration",
+        "VR Development",
         "JSON",
-        "Git"
+        "GitHub",
+        "VSCode",
       ],
       highlights: [
         "Integration with YawVR motion chair",
@@ -60,14 +72,24 @@ export default function Projects() {
       category: ["Backend", "Frontend"],
       skills: [
           "Java",
-          "SQL",
+          "MySQL",
           "JavaScript",
           "React",
-          "Git",
+          "GitHub",
+          "Jest",
+          "Node.js",
+          "TailwindCSS",
           "Maven",
           "Wildfly",
           "WebSockets",
-          "JWT Authentication"
+          "JWT Authentication",
+          "Postman",
+          "IntelliJ IDEA",
+          "VSCode",
+          "npm",
+          "Responsive Design",
+          "HTML5",
+          "CSS3"
       ],
       highlights: [
           "Define Scrum roles (Scrum Master, Product Owner, Team)",
@@ -90,7 +112,7 @@ export default function Projects() {
     : projects.filter(p=> p.category.includes(selectedCategory));
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8 bg-gray-100 dark:bg-slate-900 py-16 px-8">
+    <div className="max-w-7xl mx-auto space-y-8 bg-gray-100 dark:bg-slate-900 py-16 px-8">
       <h1 className="text-4xl text-teal-800 font-bold text-center dark:text-white mb-12">My Projects</h1>
       <div className="flex gap-2 justify-center">
         {categories.map((cat) => (
@@ -108,6 +130,8 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <motion.div
               key={project.title}
+              onClick={() => handleProjectClick(project)}
+              className="cursor-pointer"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, x: -100 }}
